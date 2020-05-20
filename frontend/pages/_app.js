@@ -8,7 +8,7 @@ const App = ({ Component, pageProps, apollo }) => {
   return (
     <ApolloProvider client={apollo}>
       <Head>
-        <title>Strapi blog</title>
+        <title>GoalBuilder.Space</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           rel="stylesheet"

@@ -4,10 +4,13 @@ import Query from "../components/query";
 import CATEGORIES_QUERY from "../apollo/queries/category/categories";
 
 const Nav = () => {
+  
   return (
     <div>
       <Query query={CATEGORIES_QUERY} id={null}>
+        
         {({ data: { categories } }) => {
+          
           return (
             <div>
               <nav className="uk-navbar-container" data-uk-navbar>
@@ -28,6 +31,7 @@ const Nav = () => {
                         <a>Goals</a>
                       </Link>
                     </li>
+
                     {categories.map((category, i) => {
                       return (
                         <li key={category.id}>

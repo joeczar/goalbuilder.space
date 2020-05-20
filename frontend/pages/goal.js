@@ -10,15 +10,15 @@ const Goal = () => {
   return (
     <Query query={GOAL_QUERY} id={router.query.id}>
       {({ data: { goal } }) => {
-        console.log(goal);
+        
         return (
-          <div className="container">
+          <div>
             <Nav />
             <header>
               <h1>{goal.Title}</h1>
               <p>{goal.Description}</p>
               <p>
-                <Moment format="MMM Do YYYY">{goal.published_at}</Moment>
+              Goal started on: <Moment format="MMM Do YYYY">{goal.published_at}</Moment>
               </p>
             </header>
 
@@ -28,10 +28,30 @@ const Goal = () => {
                 
               </div>
             </div>
-          </div>
+          
+           <style jsx>{`
+           header {
+            
+             padding: 0 1rem;
+                    
+             
+           }
+   
+           main {
+             padding: 5rem 0;
+             flex: 1;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+           }
+          `}
+           </style>
+           </div>
         );
       }}
     </Query>
+    
   );
 };
 

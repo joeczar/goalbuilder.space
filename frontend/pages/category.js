@@ -10,7 +10,7 @@ const Category = () => {
   return (
     <Query query={CATEGORY_GOALS_QUERY} id={router.query.id}>
       {({ data: { category } }) => {
-          console.log(category.goals)
+          
         return (
           <div>
               <Nav />
