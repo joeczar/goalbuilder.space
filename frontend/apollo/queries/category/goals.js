@@ -6,11 +6,14 @@ const CATEGORY_GOALS_QUERY = gql`
       title
       goals {
         id
-        Title
-        Body
+        title
+        body
         categories {
           id
           title
+        }
+        image {
+          url
         }
       }
     }

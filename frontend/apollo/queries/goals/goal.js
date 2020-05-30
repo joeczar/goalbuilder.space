@@ -3,27 +3,29 @@ import gql from "graphql-tag";
 const GOAL_QUERY = gql`
   query Goal($id: ID!) {
     goal(id: $id) {
-        id
-        Title
-      created_at
-      Description
-        Body
-        StartDate
-        Completed
-        CompletionDate
+      id
+        title
+      createdAt
+      description
+        body
+        startDate
+        completed
+        completionDate
         
         categories {
           id
           title
         }
             goal_steps{
-          StepID
-          StepNumber
-          Title
-          Description
+          id
+          step
+          complete
+          title
+          description
         }
-          CompletionDate
-        updated_at
+        completed
+      completionDate
+        updatedAt
       }
     }
 `;

@@ -4,7 +4,7 @@ const GOALS_QUERY = gql`
   query goals {
     goals {
       id
-      Title
+      title
       categories {
         id
         title

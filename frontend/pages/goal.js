@@ -4,9 +4,11 @@ import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import GOAL_QUERY from "../apollo/queries/goals/goal";
 import Nav from "../components/nav";
+import GoalStepCard from "../components/goalStepCard"
 
 const Goal = () => {
   const router = useRouter();
+  
   return (
     <Query query={GOAL_QUERY} id={router.query.id}>
       {({ data: { goal } }) => {
@@ -15,17 +17,26 @@ const Goal = () => {
           <div>
             <Nav />
             <header>
-              <h1>{goal.Title}</h1>
-              <p>{goal.Description}</p>
+              <h1>{goal.title}</h1>
+              <p>{goal.description}</p>
               <p>
-              Goal started on: <Moment format="MMM Do YYYY">{goal.published_at}</Moment>
+              Goal started on: <Moment format="MMM Do YYYY">{goal.created_at}</Moment>
               </p>
             </header>
 
             <div className="uk-section">
               <div className="uk-container uk-container-small">
-                <ReactMarkdown source={goal.Body} />
-                
+                <ReactMarkdown source={goal.body} />
+              </div>
+              <div className="goalSteps uk-container uk-container-small">
+                <h1>Goal Steps</h1>
+                <ol>
+                {goal.goal_steps.map((step, i) => 
+                  <li className="goalStep" key={step.id}>
+                    <GoalStepCard step={step} />
+                  </li>
+                )}
+                </ol>
               </div>
             </div>
           

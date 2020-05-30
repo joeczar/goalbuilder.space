@@ -15,7 +15,7 @@ const Card = ({ goal }) => {
               {goal.categories.title}
             </p>
             <h1 id="title" className="uk-text-large">
-              {goal.Title}
+              {goal.title}
             </h1>
           </div>
         </div>
