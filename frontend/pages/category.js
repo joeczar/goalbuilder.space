@@ -13,7 +13,6 @@ const Category = () => {
           
         return (
           <div>
-              <Nav />
             <div className="uk-section">
               <div className="uk-container uk-container-large">
                 <h1>{category.title}</h1>

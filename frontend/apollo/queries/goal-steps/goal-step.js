@@ -12,12 +12,15 @@ const GOALSTEP_QUERY = gql`
       step
       started
       body
+      evidence
       evidenceMedia {
         url
       }
       verification
       verificationMedia {
         url
+        alternativeText
+        caption
       }
       verified
       verificationDate
@@ -26,3 +29,4 @@ const GOALSTEP_QUERY = gql`
     }
   }
 `;
+export default GOALSTEP_QUERY;

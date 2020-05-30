@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Nav />
+
 
         <div>
           <div className="uk-section">

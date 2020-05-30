@@ -8,9 +8,6 @@ export default function Home() {
         <title>GoalBuilder.Space</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      
-      <Nav />
         <div className="container">
         <main>
           <h1>

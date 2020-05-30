@@ -3,7 +3,6 @@ import Query from "../components/query";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import GOAL_QUERY from "../apollo/queries/goals/goal";
-import Nav from "../components/nav";
 import GoalStepCard from "../components/goalStepCard"
 
 const Goal = () => {
@@ -15,12 +14,11 @@ const Goal = () => {
         
         return (
           <div>
-            <Nav />
             <header>
               <h1>{goal.title}</h1>
               <p>{goal.description}</p>
               <p>
-              Goal started on: <Moment format="MMM Do YYYY">{goal.created_at}</Moment>
+              Created on: <Moment format="MMM Do YYYY">{goal.created_at}</Moment>
               </p>
             </header>
 
