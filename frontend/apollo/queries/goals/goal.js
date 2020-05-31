@@ -8,8 +8,8 @@ const GOAL_QUERY = gql`
       createdAt
       description
         body
-        startDate
-        completed
+        dateStarted
+        complete
         completionDate
         
         categories {
@@ -23,8 +23,7 @@ const GOAL_QUERY = gql`
           title
           description
         }
-        completed
-      completionDate
+        
         updatedAt
       }
     }

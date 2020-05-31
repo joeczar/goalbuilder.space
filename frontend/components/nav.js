@@ -3,6 +3,8 @@ import Link from "next/link"
 import Query from "../components/query";
 import CATEGORIES_QUERY from "../apollo/queries/category/categories";
 
+import styles from './nav.module.css'
+
 const Nav = () => {
   
   return (
@@ -13,20 +15,20 @@ const Nav = () => {
           
           return (
             <div>
-              <nav className="uk-navbar-container" data-uk-navbar>
-                <div className="uk-navbar-left">
-                  <ul className="uk-navbar-nav">
-                    <li>
-                      <Link href="/">
+              <nav className={styles.navbar_container} >
+                <div className={styles.navbar_left}>
+                  <div className={styles.nav_logo}>
+                    
+                  <h1><Link href="/">
                         <a>GoalBuilder.Space</a>
-                      </Link>
-                    </li>
-                  </ul>
+                      </Link></h1>
+                    
+                  </div>
                 </div>
 
-                <div className="uk-navbar-right">
-                  <ul className="uk-navbar-nav">
-                  <li>
+                <div className={styles.navbar_right}>
+                  <ul className={styles.goal_nav}>
+                  <li className={styles.goal_links}>
                       <Link href="/goals">
                         <a>Goals</a>
                       </Link>
@@ -34,7 +36,7 @@ const Nav = () => {
 
                     {categories.map((category, i) => {
                       return (
-                        <li key={category.id}>
+                        <li className={styles.goal_links} key={category.id}>
                           <Link
                             href={{
                               pathname: "category",

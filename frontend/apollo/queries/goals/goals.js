@@ -9,6 +9,15 @@ const GOALS_QUERY = gql`
         id
         title
       }
+      createdAt
+      description
+      
+      dateStarted
+      verified
+      verificationDate
+      complete
+      completionDate
+      started
     }
   }
 `;

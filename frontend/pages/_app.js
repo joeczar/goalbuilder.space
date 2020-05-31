@@ -1,32 +1,49 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Head from "next/head";
-import Nav from "../components/nav"
-
+import Nav from "../components/nav";
+import { useOnClickOutside } from "../hooks/hooks";
 import { ApolloProvider } from "@apollo/react-hooks";
 import withData from "../utils/apollo";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../global";
+import { theme } from "../theme";
+import { Burger, Menu } from "../components";
+
+import FocusLock from "react-focus-lock";
 
 const App = ({ Component, pageProps, apollo }) => {
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  const menuId = "main-menu";
+
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
     <ApolloProvider client={apollo}>
-      <Head>
-        <title>GoalBuilder.Space</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Staatliches"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" />
-      </Head>
-      <Nav />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Head>
+            <title>GoalBuilder.Space</title>
+            <meta
+              name="viewport"
+              content="initial-scale=1.0, width=device-width"
+            />
+          </Head>
+          <div ref={node}>
+            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+            <Menu open={open} setOpen={setOpen} id={menuId} />
+          </div>
+          <Component {...pageProps} />
+          <footer>
+            <small>
+              © 2020 <a href="https://rollercoaster.dev">Rollercoaster.dev </a>
+            </small>
+          </footer>
+        </>
+      </ThemeProvider>
     </ApolloProvider>
-  )
+  );
 };
 
 // Wraps all components in the tree with the data provider
