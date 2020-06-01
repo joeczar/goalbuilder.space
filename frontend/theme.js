@@ -1,6 +1,11 @@
 export const theme = {
-    primaryDark: '#0D0C1D',
-    primaryLight: '#EFFFFA',
-    primaryHover: '#343078',
+    primaryDark: '#455A64',
+    primary: '#607D8B',
+    primaryLight: '#CFD8DC',
+    textIcons: '#607D8B',
+    accent: '#448AFF',
+    primarytext: '#212121',
+    secondaryText: '#757575',
+    dividerColor: '#BDBDBD',
     mobile: '576px',
   }

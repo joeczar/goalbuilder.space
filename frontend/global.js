@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     
     background: ${({ theme }) => theme.primaryDark};
-    color: ${({ theme }) => theme.primaryLight};
+    color: ${({ theme }) => theme.primaryText};
    
     text-rendering: optimizeLegibility;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -24,19 +24,22 @@ export const GlobalStyles = createGlobalStyle`
     text-align: center;
     text-transform: uppercase;
   }
+  h1, h2, h3, h4, h5, h6 {
+    color: ${({ theme }) => theme.secondaryText};
+  }
   img {
     border-radius: 5px;
     height: auto;
     width: 10rem;
   }
   div {
-    text-align: center;
+    
   }
   small {
     display: block;
   }
   a {
-    color: ${({ theme }) => theme.primaryHover};
+    color: ${({ theme }) => theme.accent};
     text-decoration: none;
   }
   

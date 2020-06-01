@@ -7,4 +7,5 @@ export const StyledCard = styled.div`
   border-radius: 20px;
   margin: 0 0 2rem 0;
   padding: 1rem;
+  background: ${({ theme }) => theme.primaryMedium};
 `;
