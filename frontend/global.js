@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -9,15 +9,25 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    
-    background: ${({ theme }) => theme.primaryDark};
+    display:flex;
+    flex-direction:column;
     color: ${({ theme }) => theme.primaryText};
-   
+    background: ${({ theme }) => theme.primary};
     text-rendering: optimizeLegibility;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
-  #__next {
-    
+  #__next{
+    margin:auto;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  #homeWrapper {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    flex:1;
+    height: 95vh;
   }
   h1 {
     font-size: 2rem;
@@ -25,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     text-transform: uppercase;
   }
   h1, h2, h3, h4, h5, h6 {
-    color: ${({ theme }) => theme.secondaryText};
+    ${({ theme }) => theme.primaryText};
   }
   img {
     border-radius: 5px;
@@ -37,12 +47,18 @@ export const GlobalStyles = createGlobalStyle`
   }
   small {
     display: block;
+    
   }
   a {
-    color: ${({ theme }) => theme.accent};
     text-decoration: none;
+    color: ${({ theme }) => theme.secondary};
   }
-  
+  li {
+    
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 1.5rem;
       text-align: center;
@@ -53,23 +69,42 @@ export const GlobalStyles = createGlobalStyle`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex: 1 0 auto;
+      height: 95vh;
     }
 
     main {
-      padding: 5rem 0;
-      
+      padding: 0;
+      width: 100vw;
+      height: 95vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex: 1 0 auto;
+    }
+    header {
+      margin: -0.5rem 0 0 0rem;
+      background: ${({ theme }) => theme.primaryDark};
+      padding: 0.25rem;
     }
 
     #about {
       margin:3rem;
     }
+    footer {
+      flex-shrink: 0;
+    }
+    .shadow {
+      -webkit-box-shadow: 5px 10px 23px -15px rgba(0,0,0,0.75);
+      -moz-box-shadow: 5px 10px 23px -15px rgba(0,0,0,0.75);
+      box-shadow: 5px 10px 23px -15px rgba(0,0,0,0.75);
+    }
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      .container,
+      .container{
+        width: 100vw;
+      }
       .description {
         padding: 0rem 2rem;
         margin: 0px;
@@ -80,4 +115,4 @@ export const GlobalStyles = createGlobalStyle`
       }
     }
     
-`
+`;

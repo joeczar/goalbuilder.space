@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Goals from "../components/goals";
+import { Goals } from "../components";
 import Query from "../components/query";
 import Goals_QUERY from "../apollo/queries/goals/goals";
 import StyledGoals from "./goals.styled"
@@ -15,19 +15,19 @@ export default function Home() {
       <main>
 
         <StyledGoals>
-        <div>
-          <div className="uk-section">
-            <div className="uk-container uk-container-large">
-              <h1>My Goals</h1>
-              <Query query={Goals_QUERY}>
+          <div className="pageTitle">
+          <h1>My Goals</h1>
+          </div>
+          
+              
+              <Query query={Goals_QUERY} className="shadow">
                 {({ data: { goals } }) => {
-                  console.log({goals})
+                  
                   return <Goals goals={goals} />;
                 }}
               </Query>
-            </div>
-          </div>
-        </div>
+           
+        
         </StyledGoals>
       </main>
     </div>

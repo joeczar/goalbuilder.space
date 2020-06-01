@@ -1,3 +1,5 @@
+// from https://css-tricks.com/hamburger-menu-with-a-side-of-react-hooks-and-styled-components/
+
 import React from "react";
 import Link from "next/link";
 import Query from "../../components/query";
@@ -18,7 +20,7 @@ const Menu = ({ open, ...props }) => {
               <div >
                 <h1 className="logo">
                   <Link href="/">
-                    <a tabIndex={tabIndex}>GoalBuilder.Space</a>
+                    <a tabIndex={tabIndex} onClick={() => setOpen(!open)}>GoalBuilder.Space</a>
                   </Link>
                 </h1>
               </div>
@@ -26,7 +28,7 @@ const Menu = ({ open, ...props }) => {
                 <ul>
                   <li>
                     <Link href="/goals">
-                      <a tabIndex={tabIndex}>Goals</a>
+                      <a tabIndex={tabIndex} onClick={() => setOpen(!open)}>Goals</a>
                     </Link>
                   </li>
 
@@ -39,7 +41,7 @@ const Menu = ({ open, ...props }) => {
                             query: { id: category.id },
                           }}
                         >
-                          <a tabIndex={tabIndex}>{category.title}</a>
+                          <a tabIndex={tabIndex} onClick={() => setOpen(!open)}>{category.title}</a>
                         </Link>
                       </li>
                     );

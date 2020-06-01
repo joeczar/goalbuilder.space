@@ -6,15 +6,15 @@ import { StyledCard } from "./card.styled"
 const Card = ({ goal }) => {
     
   return (
-    <Link href={{ pathname: "goal", query: { id: goal.id } }}>
+    <Link href={{ pathname: "goal", query: { id: goal.id } }} className="shadow">
       <StyledCard>
       <a>
                   
-        <div className="card-categories">
+        <div className="card-categories shadow">
           <ul>
             {goal.categories.map( cat => {
               return (
-              <li className="category-title" className="uppercase" key={cat.id}>
+              <li className="category-title uppercase"  key={cat.id}>
                 <small>{cat.title}</small>
               </li>
               )

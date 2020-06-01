@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div>
+    <div id="homeWrapper">
       <Head>
         <title>GoalBuilder.Space</title>
         <link rel="icon" href="/favicon.ico" />
