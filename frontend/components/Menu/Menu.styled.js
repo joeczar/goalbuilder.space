@@ -1,50 +1,50 @@
 import styled from 'styled-components';
 
 export const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: ${({ theme }) => theme.primaryLight};
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out;
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-      width: 100%;
-    }
-  .logo {
-    
-  }
-  ul {
-    margin-left: -3rem;
-    list-style-type: none;
-  }
-  li {
-    padding: 2rem 0rem;
-  }
-
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.3rem;
-    color: ${({ theme }) => theme.primaryDark};
-    text-decoration: none;
-    transition: color 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: ${({ theme }) => theme.primaryLight};
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+    height: 100vh;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 9;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
+        width: 100%;
+    }
+    .logo {
+    }
+    ul {
+        margin-left: -3rem;
+        list-style-type: none;
+    }
+    li {
+        padding: 2rem 0rem;
     }
 
-    &:hover {
-      color: ${({ theme }) => theme.primaryHover};
+    a {
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        font-weight: bold;
+        letter-spacing: 0.3rem;
+        color: ${({ theme }) => theme.primaryDark};
+        text-decoration: none;
+        transition: color 0.3s linear;
+
+        @media (max-width: ${({ theme }) => theme.mobile}) {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        &:hover {
+            color: ${({ theme }) => theme.primaryHover};
+        }
     }
-  }
 `;

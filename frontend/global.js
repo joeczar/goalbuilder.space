@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   html, body {
@@ -18,16 +18,18 @@ export const GlobalStyles = createGlobalStyle`
   }
   #__next{
     margin:auto;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
+    min-height: 100vh;
     justify-content: space-around;
   }
   #homeWrapper {
     display: flex;
     flex-direction: column;
-    margin:auto;
-    flex:1;
-    height: 95vh;
+    margin: auto;
+    flex: 8 0 auto;
+    
   }
   h1 {
     font-size: 2rem;
@@ -70,13 +72,13 @@ export const GlobalStyles = createGlobalStyle`
       justify-content: center;
       align-items: center;
       flex: 1 0 auto;
-      height: 95vh;
+      
     }
 
     main {
       padding: 0;
       width: 100vw;
-      height: 95vh;
+      
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -104,6 +106,7 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: ${({ theme }) => theme.mobile}) {
       .container{
         width: 100vw;
+        height: 100%;
       }
       .description {
         padding: 0rem 2rem;
