@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
-import Query from '../../components/query';
+import Query from '../components/query';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
-import GOAL_QUERY from '../../apollo/queries/goals/goal';
-import GoalStepCard from '../../components/goalStepCard/goalStepCard';
+import GOAL_QUERY from '../apollo/queries/goals/goal';
+import GoalStepCard from '../components/goalStepCard/goalStepCard';
 import { StyledGoal } from './goal.styled';
-import GoalDates from '../../components/goalDates';
+import GoalDates from '../components/goalDates';
 
 const Goal = () => {
     const router = useRouter();

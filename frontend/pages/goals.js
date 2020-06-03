@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { Goals } from '../../components';
-import Query from '../../components/query';
-import Goals_QUERY from '../../apollo/queries/goals/goals';
+import { Goals } from '../components';
+import Query from '../components/query';
+import Goals_QUERY from '../apollo/queries/goals/goals';
 import { StyledGoals } from './goals.styled';
 
 export default function Home() {

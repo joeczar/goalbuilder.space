@@ -12,6 +12,9 @@ export const StyledGoal = styled.div`
         text-align: center;
         z-index: 3;
     }
+    article {
+        height: 500px;
+    }
     .goalDates {
         display: flex;
         flex-direction: row;
