@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-const StyledGoals = styled.div`
-    height: 100%;
-    width: 100%;
+const CategoryStyled = styled.div`
+    flex: 1;
 
-    header {
-        flex-shrink: 0;
+    .category_wrapper {
 
-        margin: 0rem auto;
     }
+   
     .goals-wrapper {
         display: flex;
         flex-direction: row;
@@ -21,6 +19,7 @@ const StyledGoals = styled.div`
         margin: 1em;
     }
     @media (max-width: ${({ theme }) => theme.mobile}) {
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -43,4 +42,4 @@ const StyledGoals = styled.div`
     }
 `;
 
-export default StyledGoals;
+export default CategoryStyled;

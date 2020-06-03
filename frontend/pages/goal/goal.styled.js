@@ -8,7 +8,8 @@ export const StyledGoal = styled.div`
     header {
         background-color: ${({ theme }) => theme.secondaryDark};
         color: ${({ theme }) => theme.secondaryText};
-        padding: 2em;
+        padding:0;
+        text-align: center;
         z-index: 3;
     }
     .goalDates {
@@ -24,5 +25,9 @@ export const StyledGoal = styled.div`
     }
     .goal-body a {
         color: ${({ theme }) => theme.secondaryLight};
+    }
+    .stepList {
+        list-style-type: none;
+        margin-left: -2.6rem;
     }
 `;

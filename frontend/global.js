@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
     margin:auto;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     justify-content: space-around;
   }
@@ -104,9 +104,20 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
+      max-width: 100vw;
+      __next,
+      main,
+      #homeWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 100vw;
+    }
+
       .container{
         width: 100vw;
-        height: 100%;
+       
       }
       .description {
         padding: 0rem 2rem;

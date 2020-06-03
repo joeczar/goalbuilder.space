@@ -3,7 +3,7 @@ import Query from '../../components/query';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import GOAL_QUERY from '../../apollo/queries/goals/goal';
-import GoalStepCard from '../../components/goalStepCard';
+import GoalStepCard from '../../components/goalStepCard/goalStepCard';
 import { StyledGoal } from './goal.styled';
 import GoalDates from '../../components/goalDates';
 
@@ -27,10 +27,10 @@ const Goal = () => {
                             </div>
                             <div className="goalSteps">
                                 <h1>Goal Steps</h1>
-                                <ol>
+                                <ol className="stepList">
                                     {goal.goal_steps.map((step, i) => (
                                         <li className="goalStep" key={step.id}>
-                                            <GoalStepCard step={step} />
+                                            <GoalStepCard step={step} className="shadow"/>
                                         </li>
                                     ))}
                                 </ol>
