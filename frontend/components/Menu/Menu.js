@@ -20,7 +20,7 @@ const Menu = ({ open, ...props }) => {
               <div >
                 <h1 className="logo">
                   <Link href="/">
-                    <a tabIndex={tabIndex} onClick={() => setOpen(!open)}>GoalBuilder.Space</a>
+                    <a tabIndex={tabIndex}>GoalBuilder.Space</a>
                   </Link>
                 </h1>
               </div>
@@ -28,7 +28,7 @@ const Menu = ({ open, ...props }) => {
                 <ul>
                   <li>
                     <Link href="/goals">
-                      <a tabIndex={tabIndex} onClick={() => setOpen(!open)}>Goals</a>
+                      <a tabIndex={tabIndex}>Goals</a>
                     </Link>
                   </li>
 
@@ -41,7 +41,7 @@ const Menu = ({ open, ...props }) => {
                             query: { id: category.id },
                           }}
                         >
-                          <a tabIndex={tabIndex} onClick={() => setOpen(!open)}>{category.title}</a>
+                          <a tabIndex={tabIndex}>{category.title}</a>
                         </Link>
                       </li>
                     );
