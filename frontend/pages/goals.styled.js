@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledGoals = styled.div`
+const StyledGoals = styled.div`
     height: 100%;
     width: 100%;
 
@@ -43,4 +43,4 @@ export const StyledGoals = styled.div`
     }
 `;
 
-
+export default StyledGoals;

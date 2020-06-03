@@ -8,6 +8,7 @@ import { GlobalStyles } from "../global";
 import { theme } from "../theme";
 import { Burger, Menu } from "../components";
 import FocusLock from "react-focus-lock";
+import Link from "next/link"
 
 const App = ({ Component, pageProps, apollo }) => {
   const [open, setOpen] = useState(false);
@@ -17,36 +18,47 @@ const App = ({ Component, pageProps, apollo }) => {
   useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <ApolloProvider client={apollo}>
-      <ThemeProvider theme={theme}>
-        <>
-          <GlobalStyles />
-          <Head>
-            <title>GoalBuilder.Space</title>
-            <meta
-              name="viewport"
-              content="initial-scale=1.0, width=device-width"
-            />
-          </Head>
+      <ApolloProvider client={apollo}>
+          <ThemeProvider theme={theme}>
+              <>
+                  <GlobalStyles />
+                  <Head>
+                      <title>GoalBuilder.Space</title>
+                      <meta
+                          name='viewport'
+                          content='initial-scale=1.0, width=device-width'
+                      />
+                  </Head>
 
-          <div ref={node}>
-            <FocusLock disabled={!open}>
-              <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-              <Menu open={open} setOpen={setOpen} id={menuId} />
-            </FocusLock>
-          </div>
-          <header className="shadow">
-            <h1>GoalBuilder</h1>
-          </header>
-          <Component id="wrapper" {...pageProps} />
-          <footer>
-            <small>
-              © 2020 <a href="https://rollercoaster.dev">Rollercoaster.dev </a>
-            </small>
-          </footer>
-        </>
-      </ThemeProvider>
-    </ApolloProvider>
+                  <div ref={node}>
+                      <FocusLock disabled={!open}>
+                          <Burger
+                              open={open}
+                              setOpen={setOpen}
+                              aria-controls={menuId}
+                          />
+                          <Menu open={open} setOpen={setOpen} id={menuId} />
+                      </FocusLock>
+                  </div>
+                  <header className='shadow'>
+                      <h1>
+                          <Link href="/">
+                              <a class="site-title">GoalBuilder</a>
+                          </Link>
+                      </h1>
+                  </header>
+                  <Component id='wrapper' {...pageProps} />
+                  <footer>
+                      <small>
+                          © 2020{' '}
+                          <a href='https://rollercoaster.dev'>
+                              Rollercoaster.dev{' '}
+                          </a>
+                      </small>
+                  </footer>
+              </>
+          </ThemeProvider>
+      </ApolloProvider>
   );
 };
 

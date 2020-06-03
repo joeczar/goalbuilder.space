@@ -102,7 +102,9 @@ export const GlobalStyles = createGlobalStyle`
       -moz-box-shadow: 5px 10px 23px -15px rgba(0,0,0,0.75);
       box-shadow: 5px 10px 23px -15px rgba(0,0,0,0.75);
     }
-
+    .site-title {
+      color: ${({ theme }) => theme.primaryText})!important;
+    }
     @media (max-width: ${({ theme }) => theme.mobile}) {
       max-width: 100vw;
       __next,

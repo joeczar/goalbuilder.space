@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import GOAL_QUERY from '../apollo/queries/goals/goal';
 import GoalStepCard from '../components/goalStepCard/goalStepCard';
-import { StyledGoal } from './goal.styled';
+import  StyledGoal  from './goal.styled';
 import GoalDates from '../components/goalDates';
 
 const Goal = () => {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledGoal = styled.div`
+const StyledGoal = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0em;
@@ -34,3 +34,4 @@ export const StyledGoal = styled.div`
         margin-left: -2.6rem;
     }
 `;
+export default StyledGoal;
