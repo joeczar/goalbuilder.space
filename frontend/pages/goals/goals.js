@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Goals } from '../../components';
 import Query from '../../components/query';
 import Goals_QUERY from '../../apollo/queries/goals/goals';
-import StyledGoals from './goals.styled';
+import { StyledGoals } from './goals.styled';
 
 export default function Home() {
     return (
@@ -12,7 +12,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
+            <main> 
                 <StyledGoals>
                     <div className="pageTitle">
                         <h1>My Goals</h1>
