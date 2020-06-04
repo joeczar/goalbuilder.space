@@ -20,23 +20,9 @@ const StyledGoals = styled.div`
     .cardGoal {
         margin: 1em;
     }
+    
     @media (max-width: ${({ theme }) => theme.mobile}) {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
-        .container,
-        main {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-content: center;
-        }
-        .goals-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+        
         .cardGoal {
             margin: 1em 0em;
         }

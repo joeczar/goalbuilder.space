@@ -20,7 +20,12 @@ const GOAL_QUERY = gql`
             goal_steps {
                 id
                 step
+                started
+                dateStarted
                 complete
+                completionDate
+                verified
+                verificationDate
                 title
                 description
             }

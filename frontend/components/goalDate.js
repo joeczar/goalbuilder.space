@@ -5,16 +5,19 @@ const goalDate = ({ action, bool, date }) => {
     if (bool) {
         return (
             <div>
-                {action} on: {" "}
-                <Moment format="Do MMM YYYY">{date}</Moment>
+                <span className='action'>{action}</span>
+                <span className="date">
+                    <Moment format='DD.MM.YY'>{date}</Moment>
+                </span>
             </div>
-            )
+        );
     } else {
         return (
             <div>
-                Not {action}
+                <span className='action'>{action}</span>
+                <span className='negation'>No</span>
             </div>
-        )
+        );
     };
 
 };

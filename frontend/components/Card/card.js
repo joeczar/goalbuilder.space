@@ -7,7 +7,6 @@ const Card = ({ goal }) => {
     return (
         <Link
             href={{ pathname: 'goal', query: { id: goal.id } }}
-            className="shadow"
         >
             <StyledCard className="cardGoal">
                 <a>

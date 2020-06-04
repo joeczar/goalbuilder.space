@@ -4,13 +4,6 @@ import GoalDates from '../goalDates';
 import {StyledStepCard} from './goalStepCard.styled';
 
 const GoalStepCard = ({ step }) => {
-    const goalStepCompleted = (completed) => {
-        if (completed === null) {
-            return 'No';
-        } else {
-            return 'Yes';
-        }
-    };
 
     return (
         <Link href={{ pathname: 'goal-step', query: { id: step.id } }}>

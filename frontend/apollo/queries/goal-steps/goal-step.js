@@ -26,6 +26,10 @@ const GOALSTEP_QUERY = gql`
       verificationDate
       complete
       completionDate
+      goal {
+        title
+        id
+      }
     }
   }
 `;
