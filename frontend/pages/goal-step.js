@@ -46,7 +46,7 @@ const GoalStep = () => {
                     <div className='evidence shadow'>
                         <h2>Evidence</h2>
                         <ReactMarkdown source={goalStep.evidence} />
-                        <ul class='evidence-media'>
+                        <ul className='evidence-media'>
                             {goalStep.evidenceMedia.map((img, i) => {
                                 return (
                                     <li key={i + img.url} className="shadow">

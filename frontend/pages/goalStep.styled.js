@@ -58,7 +58,7 @@ const GoalStepStyled = styled.div`
     .evidence li {
         margin-bottom: 2em;
         padding: 0.5rem;
-        
+        overflow:hidden;
         background-color: ${({ theme }) => theme.primaryDark}
     }
     .evidenceImg {
