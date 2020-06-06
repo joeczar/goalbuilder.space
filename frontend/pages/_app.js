@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Head from 'next/head';
-import { useOnClickOutside } from '../hooks/hooks';
+import { useOnClick } from '../hooks/hooks';
 import { ApolloProvider } from '@apollo/react-hooks';
 import withData from '../utils/apollo';
 import { ThemeProvider } from 'styled-components';
@@ -15,7 +15,7 @@ const App = ({ Component, pageProps, apollo }) => {
     const node = useRef();
     const menuId = 'main-menu';
 
-    useOnClickOutside(node, () => setOpen(false));
+    useOnClick(node, () => setOpen(false));
 
     return (
         <ApolloProvider client={apollo}>

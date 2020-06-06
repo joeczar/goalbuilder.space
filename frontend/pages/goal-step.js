@@ -15,7 +15,7 @@ const GoalStep = () => {
   return (
     <Query query={GOALSTEP_QUERY} id={router.query.id}>
       {({ data: { goalStep } }) => {
-         console.log(goalStep);
+        
         return (
             <GoalStepStyled className='goal-step'>
                 <header>
