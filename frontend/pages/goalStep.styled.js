@@ -16,6 +16,9 @@ const GoalStepStyled = styled.div`
         margin: auto;
         padding: 1em;
     }
+    header h1 {
+        margin: 0 1em;
+    }
     .goalDates {
         display: flex;
         flex-direction: row;
@@ -23,6 +26,18 @@ const GoalStepStyled = styled.div`
         background-color: ${({ theme }) => theme.secondaryLight};
         padding: 0.25em 1em;
     }
+    .body,
+    .evidence {
+        background-color: ${({ theme }) => theme.primaryLight};
+        padding: 2em;
+        max-width: 60em;
+        margin: auto auto 2em auto;
+    }
+    .evidence a,
+    .body a {
+        color: ${({ theme }) => theme.secondaryLight};
+    }
+
     .action {
         display: block;
         color: ${({ theme }) => theme.primary};
@@ -33,13 +48,21 @@ const GoalStepStyled = styled.div`
     .content {
         padding: 1em;
     }
-    .evidence-media {
+    
+    .evidence ul {
         list-style-type: none;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        display: contents;
-        margin: 0px;
+    }
+    .evidence li {
+        margin-bottom: 2em;
+        padding: 0.5rem;
+        
+        background-color: ${({ theme }) => theme.primaryDark}
+    }
+    .evidenceImg {
+        width: 100%;
     }
     @media (max-width: ${({ theme }) => theme.mobile}) {
         .evidenceImg {

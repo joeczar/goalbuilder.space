@@ -17,7 +17,7 @@ const GoalStep = () => {
       {({ data: { goalStep } }) => {
          console.log(goalStep);
         return (
-            <GoalStepStyled class='goal-step'>
+            <GoalStepStyled className='goal-step'>
                 <header>
                     <h1>
                         <Link
@@ -39,17 +39,17 @@ const GoalStep = () => {
                     <p>Description: {goalStep.description}</p>
                     <GoalDates goal={goalStep} />
                 </header>
-                <div className='content'>
-                    <div className='goalSteps body'>
+                <article className='content'>
+                    <div className='body shadow'>
                         <ReactMarkdown source={goalStep.body} />
                     </div>
-                    <div className='goalSteps evidence'>
+                    <div className='evidence shadow'>
                         <h2>Evidence</h2>
                         <ReactMarkdown source={goalStep.evidence} />
                         <ul class='evidence-media'>
                             {goalStep.evidenceMedia.map((img, i) => {
                                 return (
-                                    <li key={i + img.url}>
+                                    <li key={i + img.url} className="shadow">
                                         <img
                                             className='evidenceImg'
                                             src={URL + img.url}
@@ -60,7 +60,7 @@ const GoalStep = () => {
                             })}
                         </ul>
                     </div>
-                </div>
+                </article>
             </GoalStepStyled>
         );
       }}

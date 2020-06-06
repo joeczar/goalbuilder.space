@@ -29,8 +29,8 @@ const Goal = () => {
                                 <h1>Goal Steps</h1>
                                 <ol className="stepList">
                                     {goal.goal_steps.map((step, i) => (
-                                        <li className="goalStep" key={step.id}>
-                                            <GoalStepCard step={step} className="shadow"/>
+                                        <li className="goalStep shadow" key={step.id}>
+                                            <GoalStepCard step={step} />
                                         </li>
                                     ))}
                                 </ol>

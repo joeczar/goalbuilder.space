@@ -105,6 +105,31 @@ export const GlobalStyles = createGlobalStyle`
     .site-title {
       color: ${({ theme }) => theme.primaryText})!important;
     }
+    .datesWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex: 1;
+        max-width: 70em;
+        margin:auto;
+    }
+    .article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .evidence ul,
+    .goalSteps ol,
+    .goalSteps ol li {
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .stepList {
+        list-style-type: none;
+        margin-left: -2.6rem;
+        max-width: 60em;
+        margin: auto!important;
+    }
     @media (max-width: ${({ theme }) => theme.mobile}) {
       max-width: 100vw;
       __next,
